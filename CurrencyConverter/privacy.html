@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy / Политика конфиденциальности</title>
+    <style>
+        :root {
+            --bg-color: #f7f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --accent-color: #d4af37; /* Цвет золота под стать вашей теме */
+            --border-color: #e1e4e6;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        .lang-btn {
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+        h1 { font-size: 28px; margin-top: 0; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        h3 { font-size: 18px; margin-top: 25px; color: #111; }
+        p, li { font-size: 15px; color: #444; }
+        ul { padding-left: 20px; }
+        .hidden { display: none; }
+        .footer { margin-top: 40px; font-size: 13px; color: #888; text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Переключатель языков -->
+    <div class="lang-switch">
+        <button class="lang-btn" onclick="toggleLanguage()">English / Русский</button>
+    </div>
+
+    <!-- РУССКАЯ ВЕРСИЯ -->
+    <div id="lang-ru">
+        <h1>Политика конфиденциальности</h1>
+        <p><strong>Последнее обновление:</strong> 1 октября 2026 г.</p>
+        <p>Разработчик <strong>Кулик Андрей</strong> (andrei.kulik@bellsoft.ru), далее — «Разработчик», заботится о конфиденциальности пользователей своего мобильного приложения-конвертера валют (далее — «Приложение»). Данная Политика конфиденциальности объясняет, как Приложение взаимодействует с информацией.</p>
+        
+        <h3>1. Сбор и использование персональных данных</h3>
+        <p>Приложение спроектировано по принципу <strong>offline-first</strong> и работает полностью локально на вашем мобильном устройстве.</p>
+        <ul>
+            <li>Приложение <strong>не собирает</strong>, не запрашивает, не хранит и не передает третьим лицам никакую личную информацию пользователей (такую как имя, адрес электронной почты, номер телефона или информацию о местоположении).</li>
+            <li>В Приложении отсутствует функция регистрации, поэтому все пользовательские настройки (выбранные темы оформления, порядок валют в списке) хранятся исключительно в памяти вашего собственного устройства.</li>
+        </ul>
+
+        <h3>2. Запросы к сторонним сервисам (API)</h3>
+        <p>Для обеспечения своей основной функции — конвертации валют — Приложение загружает актуальные курсы обмена из открытого источника: сайта <strong>freecurrencyrates.com</strong>.</p>
+        <ul>
+            <li>Этот запрос выполняется исключительно с целью получения актуальных котировок валют.</li>
+            <li>В процессе запроса к API стороннему сайту не передаются никакие личные или идентифицирующие пользователя данные.</li>
+        </ul>
+
+        <h3>3. Реклама и аналитика</h3>
+        <ul>
+            <li>Приложение <strong>не содержит встроенной рекламы</strong> (рекламные идентификаторы AdID/IDFA не используются).</li>
+            <li>Приложение <strong>не использует сторонние сервисы аналитики</strong> или сбора отчетов об ошибках (такие как Google Analytics, Firebase, Amplitude и др.).</li>
+        </ul>
+
+        <h3>4. Безопасность данных</h3>
+        <p>Поскольку Приложение не собирает персональные данные в сети Интернет и не хранит их на удаленных серверах, риск утечки вашей конфиденциальной информации исключен. Безопасность локальных данных в памяти устройства обеспечивается стандартными механизмами защиты операционной системы Android.</p>
+
+        <h3>5. Контакты</h3>
+        <p>Если у вас возникли вопросы или предложения относительно работы Приложения и защиты данных, вы можете связаться со мной напрямую по электронной почте: <a href="mailto:andrei.kulik@bellsoft.ru">andrei.kulik@bellsoft.ru</a>.</p>
+    </div>
+
+    <!-- АНГЛИЙСКАЯ ВЕРСИЯ -->
+    <div id="lang-en" class="hidden">
+        <h1>Privacy Policy</h1>
+        <p><strong>Last Updated:</strong> October 1, 2026</p>
+        <p>Developer <strong>Andrei Kulik</strong> (andrei.kulik@bellsoft.ru), hereinafter referred to as the "Developer", cares about the privacy of the users of their mobile currency converter application (hereinafter referred to as the "Application"). This Privacy Policy explains how the Application interacts with information.</p>
+        
+        <h3>1. Collection and Use of Personal Data</h3>
+        <p>The Application is designed based on the <strong>offline-first</strong> approach and operates entirely locally on your mobile device.</p>
+        <ul>
+            <li>The Application <strong>does not collect</strong>, request, store, or share with third parties any personal information of users (such as name, email address, phone number, or location data).</li>
+            <li>There is no registration feature in the Application, so all user settings (selected color themes, currency order in the list) are stored exclusively in your own device's memory.</li>
+        </ul>
+
+        <h3>2. Third-Party API Requests</h3>
+        <p>To provide its core function — currency conversion — the Application downloads up-to-date exchange rates from an open source: the <strong>freecurrencyrates.com</strong> website.</p>
+        <ul>
+            <li>This request is performed solely to retrieve current currency quotes.</li>
+            <li>No personal or user-identifying data is transmitted to the third-party website during the API request.</li>
+        </ul>
+
+        <h3>3. Advertising and Analytics</h3>
+        <ul>
+            <li>The Application <strong>does not contain integrated advertising</strong> (advertising identifiers like AdID/IDFA are not used).</li>
+            <li>The Application <strong>does not use third-party analytics services</strong> or crash reporting tools (such as Google Analytics, Firebase, Amplitude, etc.).</li>
+        </ul>
+
+        <h3>4. Data Security</h3>
+        <p>Since the Application does not collect personal data online and does not store it on remote servers, the risk of your confidential information leaking is eliminated. The security of local data in the device's memory is ensured by the standard protection mechanisms of the Android operating system.</p>
+
+        <h3>5. Contact Information</h3>
+        <p>If you have any questions or suggestions regarding the operation of the Application and data protection, you can contact me directly via email: <a href="mailto:andrei.kulik@bellsoft.ru">andrei.kulik@bellsoft.ru</a>.</p>
+    </div>
+
+    <div class="footer">
+        © 2026 Andrei Kulik. All rights reserved.
+    </div>
+</div>
+
+<script>
+    function toggleLanguage() {
+        var ruDiv = document.getElementById('lang-ru');
+        var enDiv = document.getElementById('lang-en');
+        var htmlTag = document.documentElement;
+
+        if (ruDiv.classList.contains('hidden')) {
+            ruDiv.classList.remove('hidden');
+            enDiv.classList.add('hidden');
+            htmlTag.setAttribute('lang', 'ru');
+        } else {
+            ruDiv.add('hidden');
+            ruDiv.classList.add('hidden');
+            enDiv.classList.remove('hidden');
+            htmlTag.setAttribute('lang', 'en');
+        }
+    }
+</script>
+</body>
+</html>
