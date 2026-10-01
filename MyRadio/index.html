@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моё Радио — Android App (Open Source)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Акцентные бейджи для стека технологий */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 14px 0 20px 0;
+    }
+    .tech-pill {
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #c7d2fe;
+    }
+    .theme-pill {
+      background: #fdf2f8;
+      color: #9d174d;
+      border-color: #fbcfe8;
+    }
+    .sheet-feature {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .sheet-feature h4 {
+      margin: 0 0 6px 0;
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="nav-back" href="../index.html">← Все приложения</a>
+
+    <!-- Шапка приложения -->
+    <header class="app-header">
+      <img class="app-icon" src="../assets/icons/myradio-icon.svg" alt="Моё Радио" onerror="this.src='https://via.placeholder.com/96?text=Radio'">
+      <div class="app-meta">
+        <h1>Моё Радио</h1>
+        <div class="badges">
+          <span class="badge">Open Source</span>
+          <span class="badge">Jetpack Compose</span>
+          <span class="badge">Material You (M3)</span>
+          <span class="badge">2500+ Станций</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Стек технологий -->
+    <div class="tech-stack">
+      <span class="tech-pill">Kotlin</span>
+      <span class="tech-pill">Jetpack Compose</span>
+      <span class="tech-pill">Material Design 3</span>
+      <span class="tech-pill">MVVM</span>
+      <span class="tech-pill">Media3 / ExoPlayer</span>
+      <span class="tech-pill">Room Database</span>
+      <span class="tech-pill">Coroutines & Flow</span>
+      <span class="tech-pill">Palette API</span>
+      <span class="tech-pill">AnchoredDraggable</span>
+    </div>
+
+    <!-- Кнопки действий -->
+    <div class="actions">
+      <!-- Ссылка на последний релиз с APK -->
+      <a class="btn btn-primary" href="https://github.com/kandrei777/ComposeDemoRadio/releases/latest" target="_blank" rel="noopener noreferrer">
+        ⬇ Скачать APK (Последняя версия)
+      </a>
+
+      <!-- Ссылка на репозиторий GitHub -->
+      <a class="btn btn-secondary" href="https://github.com/kandrei777/ComposeDemoRadio" target="_blank" rel="noopener noreferrer">
+        Исходный код на GitHub
+      </a>
+
+      <a class="btn btn-secondary" href="privacy.html">
+        Политика конфиденциальности
+      </a>
+    </div>
+
+    <!-- Галерея скриншотов -->
+    <h2>Интерфейс</h2>
+<div class="gallery">
+      <img src="../assets/screenshots/radio-main.png" alt="Список радиостанций" onerror="this.src='https://via.placeholder.com/220x400?text=Список+станций'">
+      <img src="../assets/screenshots/radio-main-mini.png" alt="Мини плеер" onerror="this.src='https://via.placeholder.com/220x400?text=Мини-плеер'">
+      <img src="../assets/screenshots/radio-main-info.png" alt="Информация о радиостанции" onerror="this.src='https://via.placeholder.com/220x400?text=Инфо+о+станции'">
+      <img src="../assets/screenshots/radio-main-full.png" alt="Вся шторка" onerror="this.src='https://via.placeholder.com/220x400?text=Шторка+плеера'">
+      <img src="../assets/screenshots/radio-fav.png" alt="Закладка фаворитов" onerror="this.src='https://via.placeholder.com/220x400?text=Избранное'">
+      <img src="../assets/screenshots/radio-theme-menu.png" alt="Меню тем" onerror="this.src='https://via.placeholder.com/220x400?text=Меню+тем'">
+      <img src="../assets/screenshots/radio-theme-light.png" alt="Светлая тема" onerror="this.src='https://via.placeholder.com/220x400?text=Светлая+тема'">
+    </div>
+    <!-- Описание приложения -->
+    <h2>О проекте</h2>
+    <p>
+      <strong>«Моё Радио»</strong> — современное Android-приложение для прослушивания онлайн-радиостанций с открытым исходным кодом. Включает базу из более чем <strong>2500 радиостанций</strong>, сохраненную локально для быстрого и независимого доступа без ожидания сетевых запросов.
+    </p>
+
+    <h2>Ключевые возможности</h2>
+    <ul>
+      <li><strong>Офлайн-каталог станций:</strong> мгновенный доступ к списку без задержек сети.</li>
+      <li><strong>Умная фильтрация и поиск:</strong> поиск по названию станции и группировка по жанрам.</li>
+      <li><strong>Избранное и история:</strong> сохранение любимых станций и быстрый возврат к недавним прослушиваниям.</li>
+      <li><strong>Динамическая подсветка (Android Palette Library):</strong> карточки радиостанций плавно адаптируют акцентный цвет под преобладающий оттенок логотипа станции.</li>
+    </ul>
+
+    <!-- Поддержка тем и Material 3 -->
+    <h2>Гибкая тема Material Design 3 (M3)</h2>
+    <p>
+      Архитектура темы спроектирована с легкой интеграцией цветовых схем, сгенерированных через плагин <strong>Material Theme Builder (M3)</strong>. Поддерживаются как Светлая (Light), так и Тёмная (Dark) темы в различных режимах контрастности и доступности:
+    </p>
+    <ul>
+      <li><strong>Стандартный контраст (Standard):</strong> сбалансированная фирменная палитра Material Design 3.</li>
+      <li><strong>Средний контраст (Medium Contrast):</strong> повышенная четкость для лучшей читаемости на солнце.</li>
+      <li><strong>Высокий контраст (High Contrast):</strong> максимальный уровень контраста элементов для пользователей с особенностями зрения.</li>
+      <li><strong>Динамические цвета (Dynamic Colors / Monet):</strong> автоматическая генерация всей палитры приложения на основе фонового рисунка рабочего стола (обоев) устройства.</li>
+    </ul>
+
+    <h2>Продвинутая нижняя шторка (Мини-плеер)</h2>
+    <p>
+      Интерактивный плеер спроектирован на базе жестов с жесткими точками прилипания (<code>AnchoredDraggable</code>) и плавно раскрывает элементы по мере выдвигания:
+    </p>
+    
+    <div class="sheet-feature">
+      <h4>1. Controls (Всегда доступно)</h4>
+      <p style="margin: 0; font-size: 14px;">Компактный бар управления: мини-логотип текущей радиостанции и быстрый переключатель Play/Pause.</p>
+    </div>
+
+    <div class="sheet-feature">
+      <h4>2. Info (Детальная информация)</h4>
+      <p style="margin: 0; font-size: 14px;">Блок подробного описания радиостанции с автоматическим вертикальным скроллом для длинных текстов.</p>
+    </div>
+
+    <div class="sheet-feature">
+      <h4>3. Extra Buttons (Быстрые действия)</h4>
+      <p style="margin: 0; font-size: 14px;">Панель быстрых переходов: добавление в «Избранное» (дублирует действие на карточке) и кнопка перехода на официальный веб-сайт радиостанции.</p>
+    </div>
+
+    <div class="sheet-feature">
+      <h4>4. Volume (Индивидуальный уровень)</h4>
+      <p style="margin: 0; font-size: 14px;">Специальный регулятор громкости для тонкой подстройки уровня звука конкретного радиопотока.</p>
+    </div>
+
+    <!-- Видеодемонстрация YouTube -->
+    <h2>Видеодемонстрация</h2>
+    <div class="video-wrap">
+      <iframe 
+        src="https://www.youtube.com/embed/BVN29Oz96BM" 
+        title="Демонстрация Моё Радио" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="../index.html">← Все приложения</a>
+    </footer>
+  </div>
+</body>
+</html>

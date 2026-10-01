@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="radioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7e5f"/>
+      <stop offset="100%" stop-color="#feb47b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="115" fill="url(#radioGrad)"/>
+  <!-- Антенна -->
+  <line x1="140" y1="170" x2="220" y2="80" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="225" cy="75" r="14" fill="#ffffff"/>
+  <!-- Корпус приемника -->
+  <rect x="90" y="160" width="332" height="230" rx="30" fill="#ffffff" opacity="0.95"/>
+  <!-- Динамик -->
+  <circle cx="190" cy="275" r="65" fill="#ff7e5f" opacity="0.2"/>
+  <circle cx="190" cy="275" r="45" fill="#ff7e5f" opacity="0.4"/>
+  <circle cx="190" cy="275" r="22" fill="#ff7e5f"/>
+  <!-- Шкала / Ручки управления -->
+  <rect x="285" y="200" width="100" height="30" rx="8" fill="#e0e0e0"/>
+  <circle cx="310" cy="290" r="22" fill="#ff7e5f"/>
+  <circle cx="365" cy="290" r="22" fill="#ff7e5f"/>
+</svg>

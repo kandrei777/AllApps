@@ -1,0 +1,19 @@
+AllApps/
+├── index.html                   # Главная страница (витрина всех 4 приложений)
+├── css/
+│   └── style.css                # Общие стили
+├── CurrencyConverter/
+│   ├── index.html               # Страница-презентация приложения
+│   └── privacy.html             # Политика конфиденциальности
+├── EasyCalculatorProV1/
+│   ├── index.html
+│   └── privacy.html
+├── EasyCalculatorProV2/
+│   ├── index.html
+│   └── privacy.html
+├── MyRadio/
+│   ├── index.html
+│   └── privacy.html
+└── assets/
+    ├── icons/
+    └── screenshots/

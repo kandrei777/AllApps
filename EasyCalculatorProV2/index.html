@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Calculator Pro V2 — Advanced Mathematical Engine</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Акцентная палитра V2 (Gold & Dark Espresso) */
+        :root {
+            --v2-gold: #dfa743;
+            --v2-dark: #1e110e;
+            --v2-chip-bg: #2d1b17;
+        }
+
+        .badge-v2 {
+            background: #fef3c7;
+            color: #92400e;
+            font-weight: 600;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 14px 0 20px 0;
+        }
+
+        .tech-pill {
+            background: #fdf6ec;
+            color: #7c4a03;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #faecd8;
+        }
+
+        .feature-card {
+            background: #faf8f6;
+            border: 1px solid #ebdcd0;
+            border-left: 4px solid var(--v2-gold);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin: 14px 0;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 6px 0;
+            font-size: 16px;
+            color: #3b2319;
+        }
+
+        .feature-card p,
+        .feature-card ul {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .code-box {
+            background: #18110e;
+            color: #f7dfa5;
+            padding: 14px;
+            border-radius: 10px;
+            font-family: Consolas, "Fira Code", monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a class="nav-back" href="../index.html">← Все приложения</a>
+
+        <!-- Шапка приложения -->
+        <header class="app-header">
+            <img class="app-icon" src="../assets/icons/calc-v2-icon.svg" alt="Easy Calculator Pro V2 Иконка"
+                onerror="this.src='https://via.placeholder.com/96?text=Calc+V2'">
+            <div class="app-meta">
+                <h1>Easy Calculator Pro V2</h1>
+                <div class="badges">
+                    <span class="badge badge-v2">Next-Gen Engine</span>
+                    <span class="badge">In Development / Beta</span>
+                    <span class="badge">Kotlin Multiplatform Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Стек технологий -->
+        <div class="tech-stack">
+            <span class="tech-pill">Kotlin</span>
+            <span class="tech-pill">Pratt Parser</span>
+            <span class="tech-pill">Custom Lexer</span>
+            <span class="tech-pill">AST Evaluator</span>
+            <span class="tech-pill">Jetpack Compose</span>
+            <span class="tech-pill">VisualTransformation</span>
+            <span class="tech-pill">Stateful DMS Engine</span>
+        </div>
+
+        <!-- Кнопки действий -->
+        <div class="actions">
+            <!-- Ссылка на видеодемонстрацию -->
+            <a class="btn btn-primary" href="https://youtu.be/6KWFndDU_xI" target="_blank" rel="noopener noreferrer">
+                ▶ Смотреть видеодемо
+            </a>
+
+            <a class="btn btn-secondary" href="privacy.html">
+                Политика конфиденциальности
+            </a>
+        </div>
+
+<!-- Галерея скриншотов -->
+        <h2>Интерфейс</h2>
+        <div class="gallery">
+            <img src="../assets/screenshots/calc2-highlights.png" alt="Главный экран" onerror="this.src='https://via.placeholder.com/220x400?text=Главный+экран'">
+            <img src="../assets/screenshots/calc2-num-formats.png" alt="Форматы отображения чисел" onerror="this.src='https://via.placeholder.com/220x400?text=Форматы+чисел'">
+            <img src="../assets/screenshots/calc2-angle.png" alt="Работа с углами" onerror="this.src='https://via.placeholder.com/220x400?text=Углы+и+ГМС'">
+            <img src="../assets/screenshots/calc2-angle-formats.png" alt="Отображение углов" onerror="this.src='https://via.placeholder.com/220x400?text=Форматы+углов'">
+            <img src="../assets/screenshots/calc2-imp_mul.png" alt="Неявное умножение" onerror="this.src='https://via.placeholder.com/220x400?text=Неявное+умножение'">
+            <img src="../assets/screenshots/calc2-capsule.png" alt="Капсулы" onerror="this.src='https://via.placeholder.com/220x400?text=Капсулы'">
+            <img src="../assets/screenshots/calc2-phantom-braces2.png" alt="Балансировка и фантомные символы" onerror="this.src='https://via.placeholder.com/220x400?text=Фантомные+скобки'">
+            <img src="../assets/screenshots/calc2-error-recovery.png" alt="Восстановление при ошибках" onerror="this.src='https://via.placeholder.com/220x400?text=Обработка+ошибок'">
+        </div>
+
+        <!-- О проекте -->
+        <h2>О проекте Easy Calculator Pro V2</h2>
+        <p>
+            <strong>EasyCalcPro (v2.0)</strong> — фундаментальный архитектурный редизайн и полная переработка
+            оригинального многофункционального калькулятора EasyCalcPro с нуля на Kotlin. Ядро приложения выделено в
+            полностью изолированный высокопроизводительный математический движок с собственным компиляторным пайплайном
+            (Lexer &rarr; Pratt Parser &rarr; AST Evaluator) и реактивным UI-слоем для решения сложных инженерных,
+            геодезических и научных задач.
+        </p>
+
+        <!-- Архитектура движка -->
+        <h2>Архитектурный пайплайн (5-уровневая модель)</h2>
+        <div class="code-box">
+            [S] Raw Source &rarr; [T] Tokens (Lexer) &rarr; [A] AST Tree &rarr; [VT] Visual Tokens &rarr; [VS] Visual
+            String
+        </div>
+
+        <div class="feature-card">
+            <h3>1. Слой S (Raw Source)</h3>
+            <p>Очищенная строка ввода без декоративных пробелов — единый источник истины (Single Source of Truth) для
+                расчета текстовых диапазонов (TextRange) и курсора.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>2. Слой T (Lexical Tokens & «Всеядный» Лексер)</h3>
+            <p>Лексер тотальной раскраски. Даже при синтаксически неверном вводе (например, <code>5 + @</code>)
+                неизвестный символ маркируется как <code>UNKNOWN</code> для подсветки цветом ошибки, не прерывая
+                процесс разбора. Градусы, минуты и секунды разбираются как самостоятельные токены для мгновенной
+                реакции «умной кнопки».</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>3. Слой A (AST Tree & TDOP Pratt Parser)</h3>
+            <p>Дерево синтаксического разбора. Реализован легковесный <strong>Top-Down Operator Precedence (Pratt)
+                    парсер</strong> с тонкой настройкой уровней старшинства операций:</p>
+            <ul style="margin-top: 6px; padding-left: 20px;">
+                <li><strong>Неявное умножение высшего приоритета:</strong> выражения вида <code>1/2&pi;</code>
+                    однозначно и предсказуемо транслируются в <code>1 / (2 * &pi;)</code> непосредственно при построении
+                    AST.</li>
+                <li><strong>Инкрементальный парсинг и мемоизация:</strong> неизмененные синтаксические поддеревья
+                    кэшируются в памяти, что исключает полную пересборку дерева при наборе символов и сохранение
+                    связанных данных.</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h3>4. Слой VT (Visual Tokens & Капсулы)</h3>
+            <p>Слой преобразования токенов для отображения. Если в AST узел помечен флагом
+                <code>isFolded</code>, группа токенов схлопывается в один компактный спец-токен капсулы
+                <code>FOLDED_NODE(value)</code>. Здесь же работает механизм автобалансировки скобок.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>5. Слой VS (Visual String & Custom VisualTransformation)</h3>
+            <p>Финальный продукт для отрисовки в кастомном <code>BasicTextField</code>: форматирование с тонкими
+                неразрывными пробелами в разрядах чисел, динамическая палитра токенов и плавная навигация курсора с
+                пропуском масок и учетом капсул.</p>
+        </div>
+
+        <!-- Инновация: Капсулы -->
+        <h2>Интерактивные «Капсулы» (Выражения в скобках)</h2>
+        <p>
+            Капсула — свернутая группа выражения (скобки, аргументы функций), вместо которой прямо в строке выводится ее
+            промежуточное вычисленное значение:
+        </p>
+        <ul>
+            <li><strong>Автосворачивание:</strong> скобки автоматически схлопываются в капсулу при добавлении следующего
+                бинарного оператора, например <code>(2+3)+</code> превращается в <code>[5]+</code>.</li>
+            <li><strong>Тап по капсуле:</strong> мгновенное циклическое переключение отображения: кратко
+                <code>«1.25M»</code> &rarr; полно <code>«1 250 000»</code> &rarr; исходный текст
+                <code>«(5 * 2500 * 100)»</code>.
+            </li>
+            <li><strong>Долгий тап:</strong> контекстное меню с выбором: «Развернуть всё внутри», «Копировать результат»
+                или «Заменить исходный текст результатом».</li>
+            <li><strong>Увеличенная зона клика (Touch Target):</strong> клик по знакам пунктуации разворачивает группу,
+                предотвращая случайный ввод внутрь капсулы.</li>
+            <li><strong>«Follow the Play»:</strong> результат всегда вычисляется на лету по мере ввода строки —
+                незакрытые скобки автоматически достраиваются, а «висячие» операторы в конце строки временно
+                изолируются.</li>
+        </ul>
+
+        <!-- Типизированные вычисления и ГМС -->
+        <h2>Геодезические углы (ГМС) и строгая типизация</h2>
+        <ul>
+            <li><strong>Stateful Transactional DMS Machine:</strong> поддержка сложных угловых записей:
+                <code>10°45.5"</code>, <code>.3E-3'45"</code>, <code>10'(1/4)"</code> и ввод через одну «умную
+                кнопку».
+            </li>
+            <li><strong>Строгие правила типов:</strong>
+                <div class="code-box" style="margin-top: 8px;">
+                    ANGLE / ANGLE = SCALAR (360° / 15° = 24)
+                    ANGLE / SCALAR = ANGLE (360° / 2 = 180°)
+                    100 - 10% + 10% = 99 (Аддитивный процент)
+                    % * SCALAR = % (Масштабирование доли: 10% * 2 = 20%)
+                </div>
+            </li>
+        </ul>
+
+        <!-- Видеодемонстрация YouTube -->
+        <h2>Видеодемонстрация работы</h2>
+        <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/6KWFndDU_xI" title="Демонстрация Easy Calculator Pro V2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Подвал -->
+        <footer>
+            <a href="privacy.html">Политика конфиденциальности</a>
+            <a href="../index.html">← Все приложения</a>
+        </footer>
+    </div>
+</body>
+
+</html>

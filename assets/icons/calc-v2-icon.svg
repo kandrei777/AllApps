@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Фон: глубокий кофейно-шоколадный градиент -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d1b17"/>
+      <stop offset="45%" stop-color="#1e110e"/>
+      <stop offset="100%" stop-color="#120907"/>
+    </linearGradient>
+
+    <!-- Золотой градиент для акцентных кнопок и элементов -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde08b"/>
+      <stop offset="50%" stop-color="#dfa743"/>
+      <stop offset="100%" stop-color="#b87b1c"/>
+    </linearGradient>
+
+    <!-- Темный кофейный градиент для цифр и корпуса экрана -->
+    <linearGradient id="darkKeyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d2621"/>
+      <stop offset="100%" stop-color="#261613"/>
+    </linearGradient>
+
+    <!-- Градиент экрана калькулятора -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0e0b"/>
+      <stop offset="100%" stop-color="#2b1813"/>
+    </linearGradient>
+
+    <!-- Мягкие тени -->
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="keyShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Скругленный фон иконки (Squircle Google Play) -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)"/>
+  
+  <!-- Внутренняя золотистая окантовка с легким свечением -->
+  <rect x="12" y="12" width="488" height="488" rx="105" fill="none" stroke="url(#goldGrad)" stroke-width="3" opacity="0.35"/>
+
+  <!-- Верхний экран калькулятора с золотой рамкой -->
+  <g filter="url(#softShadow)">
+    <rect x="76" y="70" width="360" height="110" rx="24" fill="url(#screenGrad)" stroke="url(#goldGrad)" stroke-width="3"/>
+    <!-- Бегущая формула/выражение -->
+    <text x="100" y="112" font-family="-apple-system, Roboto, sans-serif" font-size="22" fill="#dfa743" opacity="0.75" letter-spacing="1">sin(45°) + √x</text>
+    <!-- Основной результат на экране -->
+    <text x="408" y="156" font-family="-apple-system, Roboto, sans-serif" font-weight="700" font-size="38" fill="#ffffff" text-anchor="end">3,14159</text>
+  </g>
+
+  <!-- Бейдж версии "PRO V2" -->
+  <g filter="url(#keyShadow)">
+    <rect x="330" y="38" width="96" height="30" rx="10" fill="url(#goldGrad)"/>
+    <text x="378" y="59" font-family="-apple-system, Roboto, sans-serif" font-weight="900" font-size="15" fill="#24140e" text-anchor="middle" letter-spacing="1">PRO V2</text>
+  </g>
+
+  <!-- Клавиатура: Ряд 1 (Функции) -->
+  <g filter="url(#keyShadow)">
+    <!-- f(x) -->
+    <rect x="76" y="206" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="2"/>
+    <text x="114" y="248" font-family="-apple-system, Roboto, sans-serif" font-weight="600" font-size="24" fill="#dfa743" text-anchor="middle">f(x)</text>
+
+    <!-- x² -->
+    <rect x="170" y="206" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="2"/>
+    <text x="208" y="248" font-family="-apple-system, Roboto, sans-serif" font-weight="600" font-size="24" fill="#dfa743" text-anchor="middle">x²</text>
+
+    <!-- π -->
+    <rect x="264" y="206" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="2"/>
+    <text x="302" y="248" font-family="-apple-system, Roboto, sans-serif" font-weight="600" font-size="24" fill="#dfa743" text-anchor="middle">π</text>
+
+    <!-- Деление ÷ (Золотая клавиша) -->
+    <rect x="358" y="206" width="78" height="66" rx="18" fill="url(#goldGrad)"/>
+    <text x="397" y="250" font-family="-apple-system, Roboto, sans-serif" font-weight="700" font-size="32" fill="#24140e" text-anchor="middle">÷</text>
+  </g>
+
+  <!-- Клавиатура: Ряд 2 -->
+  <g filter="url(#keyShadow)">
+    <!-- 7 -->
+    <rect x="76" y="288" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="1.5"/>
+    <text x="114" y="331" font-family="-apple-system, Roboto, sans-serif" font-weight="500" font-size="28" fill="#f5ede8" text-anchor="middle">7</text>
+
+    <!-- 8 -->
+    <rect x="170" y="288" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="1.5"/>
+    <text x="208" y="331" font-family="-apple-system, Roboto, sans-serif" font-weight="500" font-size="28" fill="#f5ede8" text-anchor="middle">8</text>
+
+    <!-- 9 -->
+    <rect x="264" y="288" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="1.5"/>
+    <text x="302" y="331" font-family="-apple-system, Roboto, sans-serif" font-weight="500" font-size="28" fill="#f5ede8" text-anchor="middle">9</text>
+
+    <!-- Умножение × (Золотая клавиша) -->
+    <rect x="358" y="288" width="78" height="66" rx="18" fill="url(#goldGrad)"/>
+    <text x="397" y="333" font-family="-apple-system, Roboto, sans-serif" font-weight="700" font-size="30" fill="#24140e" text-anchor="middle">×</text>
+  </g>
+
+  <!-- Клавиатура: Ряд 3 (Нижний с акцентной кнопкой "=") -->
+  <g filter="url(#keyShadow)">
+    <!-- C (Сброс) -->
+    <rect x="76" y="370" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="1.5"/>
+    <text x="114" y="413" font-family="-apple-system, Roboto, sans-serif" font-weight="600" font-size="26" fill="#e57373" text-anchor="middle">C</text>
+
+    <!-- 0 -->
+    <rect x="170" y="370" width="76" height="66" rx="18" fill="url(#darkKeyGrad)" stroke="#4e322b" stroke-width="1.5"/>
+    <text x="208" y="413" font-family="-apple-system, Roboto, sans-serif" font-weight="500" font-size="28" fill="#f5ede8" text-anchor="middle">0</text>
+
+    <!-- Большая клавиша Равно "=" (Двойная ширина) -->
+    <rect x="264" y="370" width="172" height="66" rx="18" fill="url(#goldGrad)"/>
+    <!-- Блик на клавише -->
+    <rect x="268" y="373" width="164" height="24" rx="12" fill="#ffffff" opacity="0.25"/>
+    <text x="350" y="414" font-family="-apple-system, Roboto, sans-serif" font-weight="800" font-size="36" fill="#24140e" text-anchor="middle">=</text>
+  </g>
+</svg>
